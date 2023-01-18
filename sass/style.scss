@@ -7,6 +7,20 @@ body {
 	// background-color: colors.$ni-white;
 }
 
+.scrolled {
+	background-color: black;
+}
+
+.underline {
+	width: 100%;
+	height: 3px;
+	background-color: black;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
 header {
 	.hero {
 		display: flex;
@@ -26,7 +40,7 @@ header {
 		background-attachment: fixed;
 		background-position: center;
 		background-size: cover;
-		color: colors.$ni-white;
+		color: colors.$white;
 		h1 {
 			position: relative;
 			animation: textDown 1s 1;
@@ -40,15 +54,15 @@ header {
 			font-size: 25px;
 		}
 		button {
-			color: colors.$ni-gold-darker;
-			background-color: colors.$ni-gold;
+			color: colors.$main-color-dark;
+			background-color: colors.$main-color;
 			opacity: 0;
 			animation: textUp 1s 0.6s 1;
 			animation-fill-mode: forwards;
 		}
 		button:hover {
-			color: colors.$ni-gold;
-			background-color: colors.$ni-gold-darker;
+			color: colors.$main-color;
+			background-color: colors.$main-color-dark;
 		}
 		i {
 			position: absolute;
@@ -58,57 +72,45 @@ header {
 		}
 	}
 }
-
 .ni-nav {
 	background-color: transparent;
 	text-transform: uppercase;
-	color: colors.$ni-white;
+	color: colors.$white;
 	width: 100%;
 	z-index: 2;
 	transition: background-color 0.4s;
 	i {
-		color: colors.$ni-gold;
+		color: colors.$main-color;
 	}
 	a {
-		color: colors.$ni-white;
+		color: colors.$white;
 	}
 	a:hover {
-		color: colors.$ni-gold;
+		color: colors.$main-color;
 	}
 	.active {
-		color: colors.$ni-gold-darker !important;
+		color: colors.$main-color-dark !important;
 	}
 	.fa-bars {
 		padding: 10px;
 	}
 	.hide {
-		color: colors.$ni-gold-darker !important;
+		color: colors.$main-color-dark !important;
 	}
 	.navbar-brand {
 		font-weight: 700;
 	}
-	span {
-		color: colors.$ni-gold;
-	}
 }
-.scrolled {
+.install {
+	height: 100vh;
 	background-color: black;
 }
-
-.addons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100vh;
-	background-color: colors.$ni-white;
-
-	h2 {
-		font-weight: 600;
-		color: colors.$ni-gold;
-	}
+.highlight {
+	color: colors.$main-color;
 }
-
+.section-title {
+	border: 3px solid black;
+}
 @media (min-width: 1200px) {
 	header {
 		.hero {
