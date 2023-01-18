@@ -1,0 +1,163 @@
+@use '_reset';
+@use '_animation';
+@use '_colors' as colors;
+body {
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	// background-color: colors.$ni-white;
+}
+
+header {
+	.hero {
+		display: flex;
+		position: relative;
+		height: 100vh;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: rgb(17, 17, 17);
+		background-image: linear-gradient(
+				128deg,
+				rgba(17, 17, 17, 0.1) 0%,
+				rgba(33, 32, 32, 0.7) 41%,
+				rgba(22, 20, 20, 0.3) 100%
+			),
+			url('../img/bg-small.jpg');
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		color: colors.$ni-white;
+		h1 {
+			position: relative;
+			animation: textDown 1s 1;
+			font-weight: 700;
+			font-size: 40px;
+		}
+		p {
+			opacity: 0;
+			animation: textDown 1s 0.3s 1;
+			animation-fill-mode: forwards;
+			font-size: 30px;
+		}
+		button {
+			color: colors.$ni-gold-darker;
+			background-color: colors.$ni-gold;
+			opacity: 0;
+			animation: textUp 1s 0.6s 1;
+			animation-fill-mode: forwards;
+		}
+		button:hover {
+			color: colors.$ni-gold;
+			background-color: colors.$ni-gold-darker;
+		}
+		i {
+			position: absolute;
+			bottom: 50px;
+			font-size: 40px;
+			animation: arrow 1s infinite;
+		}
+	}
+}
+
+.ni-nav {
+	background-color: transparent;
+	text-transform: uppercase;
+	color: colors.$ni-white;
+	width: 100%;
+	z-index: 2;
+	transition: background-color 0.4s;
+	i {
+		color: colors.$ni-gold;
+	}
+	a {
+		color: colors.$ni-white;
+	}
+	a:hover {
+		color: colors.$ni-gold;
+	}
+	.active {
+		color: colors.$ni-gold-darker !important;
+	}
+	.fa-bars {
+		padding: 10px;
+	}
+	.hide {
+		color: colors.$ni-gold-darker !important;
+	}
+	.navbar-brand {
+		font-weight: 700;
+	}
+	span {
+		color: colors.$ni-gold;
+	}
+}
+.scrolled {
+	background-color: black;
+}
+
+.aboutus {
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	background-color: colors.$ni-white;
+
+	h2 {
+		font-weight: 600;
+		color: colors.$ni-gold;
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero {
+			background-image: linear-gradient(
+					128deg,
+					rgba(17, 17, 17, 0.1) 0%,
+					rgba(33, 32, 32, 0.7) 41%,
+					rgba(22, 20, 20, 0.3) 100%
+				),
+				url('../img/bg-full.jpg');
+		}
+	}
+}
+
+@media (min-width: 360px) {
+	header {
+		.hero {
+			p {
+				font-size: 20px;
+			}
+			h1 {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
+@media (min-width: 820px) {
+	header {
+		.hero {
+			p {
+				font-size: 30x;
+			}
+			h1 {
+				font-size: 45px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		.hero {
+			p {
+				font-size: 35px;
+			}
+			h1 {
+				font-size: 50px;
+			}
+		}
+	}
+}
